@@ -5,3 +5,7 @@ EmployeWageCom.DailyWage dailyWage = new EmployeWageCom.DailyWage();
 dailyWage.Dailywage();
 EmployeWageCom.PartTime partTime = new EmployeWageCom.PartTime();
 partTime.Part_time();
+EmployeWageCom.UsingSwitch usingSwitch = new EmployeWageCom.UsingSwitch();
+usingSwitch.UseSwitch();
+EmployeWageCom.CalculatingMonthly calculatingMonthly = new EmployeWageCom.CalculatingMonthly();
+calculatingMonthly.CalculateMonth();
