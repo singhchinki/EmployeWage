@@ -6,22 +6,19 @@ using System.Threading.Tasks;
 
 namespace EmployeWageCom
 {
-    internal class CalculateTillCondition
+    internal class MultipleCompany
     {
-
+        
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
-        public const int EMP_RATE_PER_HOUR = 20;
-        public const int NUM_OF_WORKING_DAYS = 2;
-        public const int MAX_HOURS_IN_MONTH = 20;
-        public void Campute() 
-        {
+        public static int computeEmpWage(string company,int empRatePerHour,int numOfWorkingDays,int maxHoursPerMonth)
+        { 
             int empHrs = 0;
-            int totalEmpWages;
             int totalWorkingDays = 0;
             int totalEmployeeHour = 0;
-            while (empHrs <= MAX_HOURS_IN_MONTH && totalWorkingDays <= NUM_OF_WORKING_DAYS)
+            while(empHrs<= maxHoursPerMonth && totalWorkingDays<= numOfWorkingDays)
             {
+                totalWorkingDays++;
                 Random random = new Random();
                 int empCheck = random.Next(0, 3);
                 switch (empCheck)
@@ -36,14 +33,17 @@ namespace EmployeWageCom
                         empHrs = 0;
                         break;
                 }
-
-                totalEmployeeHour += empHrs;
-                Console.WriteLine("Day=" + totalWorkingDays + " Emplyee hours=" + empHrs);
-                totalWorkingDays++;
+                totalEmployeeHour+=empHrs;
+                Console.WriteLine("Day="+ totalWorkingDays + " Emplyee hours="+ empHrs);
             }
-            totalEmpWages = totalEmployeeHour * EMP_RATE_PER_HOUR;
-            Console.WriteLine("total employee wage is=" + totalEmpWages);
+            int totalEmpWages = totalEmployeeHour * empRatePerHour;
+            Console.WriteLine("total employee wage for company is="+company+"is"+totalEmpWages);
+            return totalEmpWages;    
         }
-        
+        static void Main(string[] args)
+        {
+            computeEmpWage("DMart",20,2,10);
+            computeEmpWage("Reliance",10,4,20);
+        }
     }
 }
