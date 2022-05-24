@@ -3,3 +3,5 @@ EmployeWageCom.EmployeeAtendence employeeAtendence = new EmployeWageCom.Employee
 employeeAtendence.Attendence();
 EmployeWageCom.DailyWage dailyWage = new EmployeWageCom.DailyWage();
 dailyWage.Dailywage();
+EmployeWageCom.PartTime partTime = new EmployeWageCom.PartTime();
+partTime.Part_time();
