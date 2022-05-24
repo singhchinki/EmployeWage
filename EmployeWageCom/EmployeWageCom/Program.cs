@@ -9,3 +9,5 @@ EmployeWageCom.UsingSwitch usingSwitch = new EmployeWageCom.UsingSwitch();
 usingSwitch.UseSwitch();
 EmployeWageCom.CalculatingMonthly calculatingMonthly = new EmployeWageCom.CalculatingMonthly();
 calculatingMonthly.CalculateMonth();
+EmployeWageCom.CalculateTillCondition calculatingTillCondition = new EmployeWageCom.CalculateTillCondition();
+calculatingTillCondition.computeEmpWage();
